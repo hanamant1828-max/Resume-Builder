@@ -86,6 +86,7 @@ export async function seedDatabase() {
         "Collaborated with cross-functional teams in Agile environment to deliver high-quality software solutions on schedule"
       ]
     });
+    /*
     await storage.createExperience({
       role: "Associate Software Engineer",
       company: "Zeel Code Software Solutions",
@@ -98,6 +99,7 @@ export async function seedDatabase() {
         "Performed debugging, troubleshooting, and performance optimization to enhance application reliability and user experience"
       ]
     });
+    */
 
     // 4. Projects
     // New HRMS Project
