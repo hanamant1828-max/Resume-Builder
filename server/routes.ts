@@ -106,17 +106,6 @@ export async function seedDatabase() {
       ]
     });
 
-    await storage.createProject({
-      title: "HRMS PROJECT",
-      technologies: "React.js, Node.js API, SQL, Bootstrap",
-      description: [
-        "Developed a comprehensive Human Resource Management System using React.js for the frontend and a scalable backend API.",
-        "Implemented modules for Employee Management, Leave Management, Attendance Tracking, and Payroll Processing.",
-        "Designed responsive and interactive UI components using React hooks and functional components.",
-        "Integrated secure authentication and role-based access control for Administrators, HR, and Employees."
-      ]
-    });
-
     // 5. Education
     await storage.createEducation({
       degree: "Bachelor of Engineering in Computer Science",
