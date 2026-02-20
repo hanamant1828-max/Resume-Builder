@@ -4,8 +4,7 @@ import {
 } from "./db";
 import { 
   profile, skills, experience, projects, education, additionalInfo,
-  type Profile, type Skill, type Experience, type Project, type Education, type AdditionalInfo,
-  type InsertProfile, type InsertSkill, type InsertExperience, type InsertProject, type InsertEducation, type InsertAdditionalInfo
+  type Profile, type Skill, type Experience, type Project, type Education, type AdditionalInfo
 } from "@shared/schema";
 
 export interface IStorage {
