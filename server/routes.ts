@@ -86,34 +86,8 @@ export async function seedDatabase() {
         "Collaborated with cross-functional teams in Agile environment to deliver high-quality software solutions on schedule"
       ]
     });
-    /*
-    await storage.createExperience({
-      role: "Associate Software Engineer",
-      company: "Zeel Code Software Solutions",
-      period: "February 2023 - October 2023",
-      description: [
-        "Developed and maintained ASP.NET MVC applications using C# and Entity Framework, implementing full CRUD operations",
-        "Created RESTful APIs and integrated authentication & authorization using ASP.NET Identity for secure user management",
-        "Built responsive UI components using HTML5, CSS3, JavaScript, and jQuery, ensuring cross-browser compatibility",
-        "Optimized SQL Server databases by redesigning schemas and creating efficient stored procedures, improving query performance by 45%",
-        "Performed debugging, troubleshooting, and performance optimization to enhance application reliability and user experience"
-      ]
-    });
-    */
 
     // 4. Projects
-    // New HRMS Project
-    await storage.createProject({
-      title: "HRMS PROJECT",
-      technologies: "React.js, ASP.NET Core API, SQL Server, Bootstrap",
-      description: [
-        "Developed a comprehensive Human Resource Management System using React.js for the frontend and ASP.NET Core for the backend.",
-        "Implemented modules for Employee Management, Leave Management, Attendance Tracking, and Payroll Processing.",
-        "Designed responsive and interactive UI components using React hooks and functional components.",
-        "Integrated secure authentication and role-based access control for Administrators, HR, and Employees."
-      ]
-    });
-    
     await storage.createProject({
       title: "WPF Industrial Automation System with PLC Integration",
       technologies: "WPF, C#, MVVM, VisiWin Server, PLC Integration, Entity Framework, SQL Server",
@@ -123,28 +97,6 @@ export async function seedDatabase() {
         "Created interactive dashboards for monitoring PLC variables, system status, and historical trend analysis",
         "Designed custom WPF controls for touch-screen industrial displays with responsive UI patterns",
         "Achieved 60% reduction in manual monitoring effort through automated alert systems and data logging features"
-      ]
-    });
-    
-    await storage.createProject({
-      title: "Comprehensive ERP System for Educational Institutions",
-      technologies: "ASP.NET Core MVC, C#, Entity Framework Core, SQL Server, JavaScript, jQuery",
-      description: [
-        "Architected and developed modular ERP system covering Student Information, Admission, Fee Management, and Attendance modules",
-        "Implemented role-based security with granular data access control for administrators, faculty, and students",
-        "Built real-time reporting and analytics dashboards using Chart.js for data-driven decision-making",
-        "Designed user-friendly interface with customizable configurations to adapt to different institutional requirements"
-      ]
-    });
-
-    await storage.createProject({
-      title: "Hospital Management System",
-      technologies: "ASP.NET Core, Entity Framework Core, SQL Server, RESTful APIs",
-      description: [
-        "Developed comprehensive hospital management system for optimizing patient management and appointment scheduling",
-        "Implemented patient registration, electronic health records, billing, and payment processing modules",
-        "Created RESTful APIs for seamless integration with third-party pharmacy and diagnostic systems",
-        "Ensured HIPAA compliance with secure authentication, data encryption, and comprehensive audit logging"
       ]
     });
 
