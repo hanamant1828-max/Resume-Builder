@@ -83,6 +83,18 @@ export async function seedDatabase() {
 
     // 4. Projects
     await storage.createProject({
+      title: "Real-Time SCADA Visualization System",
+      technologies: "VisiWin, MS SQL Server, Syncfusion, PLC Integration",
+      description: [
+        "Developed a real-time SCADA visualization application using VisiWin for industrial process monitoring and control.",
+        "Designed interactive HMI screens to display live machine data, alarms, and production parameters.",
+        "Integrated Syncfusion components for advanced data visualization such as charts, grids, and dashboards.",
+        "Used MS SQL Server for storing historical data, alarm logs, and production reports.",
+        "Implemented role-based access and ensured smooth real-time communication between PLC systems and the application."
+      ]
+    });
+
+    await storage.createProject({
       title: "HRMS PROJECT",
       technologies: "React.js, Node.js API, SQL, Bootstrap",
       description: [
