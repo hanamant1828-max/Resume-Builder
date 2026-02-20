@@ -78,17 +78,17 @@ export default function ResumePage() {
   }
 
   return (
-    <div className="min-h-screen py-8 px-4 sm:px-6 md:py-12 bg-gray-50 print:bg-white print:p-0">
+    <div className="min-h-screen py-8 px-4 sm:px-6 md:py-12 bg-slate-50 print:bg-white print:p-0 font-sans">
       
       {/* Action Bar - Hidden when printing */}
       <div className="max-w-[210mm] mx-auto mb-8 flex flex-col sm:flex-row justify-between items-center gap-4 no-print">
-        <h1 className="text-xl font-medium text-gray-500">Preview Mode</h1>
+        <h1 className="text-xl font-semibold text-slate-700 tracking-tight">Interactive Resume</h1>
         <div className="flex gap-3">
-          <Button variant="outline" onClick={handlePrint} className="gap-2 shadow-sm hover:shadow-md transition-all">
+          <Button variant="outline" onClick={handlePrint} className="gap-2 bg-white hover:bg-slate-100 text-slate-700 border-slate-200 shadow-sm transition-all rounded-full px-6">
             <Printer className="w-4 h-4" />
             Print
           </Button>
-          <Button onClick={handleDownloadPDF} className="gap-2 shadow-md hover:shadow-lg transition-all">
+          <Button onClick={handleDownloadPDF} className="gap-2 bg-primary hover:bg-primary/90 text-white shadow-md hover:shadow-lg transition-all rounded-full px-6">
             <Download className="w-4 h-4" />
             Download PDF
           </Button>
@@ -98,30 +98,36 @@ export default function ResumePage() {
       {/* Resume Paper */}
       <div 
         ref={resumeRef}
-        className="mx-auto bg-white resume-paper w-full max-w-[210mm] min-h-[297mm] p-[15mm] md:p-[20mm] print:shadow-none print:w-full print:max-w-none print:p-0 print:m-0"
+        className="mx-auto bg-white resume-paper w-full max-w-[210mm] min-h-[297mm] p-[15mm] md:p-[20mm] rounded-2xl shadow-xl border border-slate-100 print:shadow-none print:border-none print:rounded-none print:w-full print:max-w-none print:p-0 print:m-0"
       >
         {/* Header Section */}
-        <header className="mb-10 border-b-2 border-primary pb-8">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4 tracking-tight">
+        <header className="mb-10 border-b-2 border-primary/20 pb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight">
             {data.profile.name}
           </h1>
           
-          <div className="flex flex-wrap gap-y-2 gap-x-6 text-sm text-gray-600 font-medium">
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-primary" />
+          <div className="flex flex-wrap gap-y-3 gap-x-6 text-sm text-slate-600 font-medium">
+            <a href={`mailto:${data.profile.email}`} className="flex items-center gap-2 hover:text-primary transition-colors">
+              <div className="p-2 bg-primary/10 rounded-full text-primary">
+                <Mail className="w-4 h-4" />
+              </div>
               <span>{data.profile.email}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-primary" />
+            </a>
+            <a href={`tel:${data.profile.phone}`} className="flex items-center gap-2 hover:text-primary transition-colors">
+              <div className="p-2 bg-primary/10 rounded-full text-primary">
+                <Phone className="w-4 h-4" />
+              </div>
               <span>{data.profile.phone}</span>
-            </div>
+            </a>
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-primary" />
+              <div className="p-2 bg-primary/10 rounded-full text-primary">
+                <MapPin className="w-4 h-4" />
+              </div>
               <span>{data.profile.location}</span>
             </div>
           </div>
 
-          <div className="mt-6 text-gray-700 leading-relaxed max-w-2xl">
+          <div className="mt-8 text-slate-700 leading-relaxed max-w-3xl text-lg border-l-4 border-primary/40 pl-6 bg-slate-50/50 py-4 pr-4 rounded-r-lg">
             {data.profile.summary}
           </div>
         </header>

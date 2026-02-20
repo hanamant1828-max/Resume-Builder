@@ -50,37 +50,31 @@ export async function seedDatabase() {
       email: "hanamant5496@gmail.com",
       phone: "7022478751",
       location: "Khanapur, Belagavi, Karnataka",
-      summary: "Results-driven Software Developer with 2+ years of experience specializing in .NET technologies, including ASP.NET Core MVC and WPF desktop applications. Proven expertise in developing scalable web applications, industrial automation systems with PLC integration, and implementing MVVM architecture. Strong background in full-stack development with proficiency in C#, Entity Framework, SQL Server, and modern UI frameworks. Demonstrated ability to deliver high-quality software solutions that improve system performance and enhance user experience."
+      summary: "Results-driven Software Developer with 2+ years of experience specializing in modern web development. Proven expertise in developing scalable web applications and implementing solid frontend architectures. Strong background in full-stack development with proficiency in React.js, JavaScript, SQL, and modern UI frameworks. Demonstrated ability to deliver high-quality software solutions that improve system performance and enhance user experience."
     });
 
     // 2. Skills
     await storage.createSkill({
-      category: "Backend & Frameworks",
-      items: ["ASP.NET Core MVC", "ASP.NET MVC", "Entity Framework Core", "RESTful API Development", "WPF", "MVVM Pattern", "Data Binding", "Dependency Injection", "Authentication & Authorization (ASP.NET Identity)"]
-    });
-    await storage.createSkill({
-      category: "Programming & Databases",
-      items: ["C#", "Asynchronous Programming (async/await)", "SQL Server", "T-SQL", "Database Design & Optimization", "Threading & Multithreading", "Performance Optimization"]
-    });
-    await storage.createSkill({
       category: "Frontend & UI",
-      items: ["HTML5", "CSS3", "JavaScript", "jQuery", "Razor Pages", "XAML", "Responsive Web Design", "Bootstrap", "React.js"] // Added React.js as implied by the new project
+      items: ["React.js", "JavaScript", "HTML5", "CSS3", "Responsive Web Design", "Tailwind CSS", "Bootstrap"]
+    });
+    await storage.createSkill({
+      category: "Backend & Databases",
+      items: ["Node.js", "Express", "RESTful API Development", "SQL", "Database Design & Optimization"]
     });
     await storage.createSkill({
       category: "Tools & Methodologies",
-      items: ["Git", "GitHub", "Version Control", "Agile/Scrum Methodology", "Visual Studio", "VS Code", "Debugging & Troubleshooting"]
+      items: ["Git", "GitHub", "Version Control", "Agile/Scrum Methodology", "VS Code", "Debugging & Troubleshooting"]
     });
 
     // 3. Experience
     await storage.createExperience({
-      role: "Associate Software Engineer",
+      role: "Software Engineer",
       company: "b+m surface system",
       period: "November 2023 - Present",
       description: [
-        "Developed and maintained full-stack web applications using ASP.NET Core MVC with C# and Entity Framework Core, serving 500+ daily users",
-        "Built enterprise-grade WPF desktop applications using MVVM architecture pattern for industrial automation and control systems",
-        "Integrated PLC systems with WPF applications using VisiWin server for real-time data monitoring and control, reducing manual monitoring by 60%",
-        "Implemented advanced WPF features including complex data binding, custom controls, and responsive UI for touch-screen displays",
+        "Developed and maintained full-stack web applications serving 500+ daily users",
+        "Implemented advanced frontend features including complex state management, custom components, and responsive UI",
         "Designed and developed RESTful APIs for data exchange between multiple systems, improving system integration efficiency by 40%",
         "Optimized database queries and implemented caching strategies, resulting in 35% improvement in application response time",
         "Collaborated with cross-functional teams in Agile environment to deliver high-quality software solutions on schedule"
@@ -89,14 +83,13 @@ export async function seedDatabase() {
 
     // 4. Projects
     await storage.createProject({
-      title: "WPF Industrial Automation System with PLC Integration",
-      technologies: "WPF, C#, MVVM, VisiWin Server, PLC Integration, Entity Framework, SQL Server",
+      title: "HRMS PROJECT",
+      technologies: "React.js, Node.js API, SQL, Bootstrap",
       description: [
-        "Developed codeless automation testing tool for industrial HMI applications using WPF and MVVM pattern",
-        "Implemented real-time communication with PLC systems through VisiWin server APIs for bidirectional data exchange",
-        "Created interactive dashboards for monitoring PLC variables, system status, and historical trend analysis",
-        "Designed custom WPF controls for touch-screen industrial displays with responsive UI patterns",
-        "Achieved 60% reduction in manual monitoring effort through automated alert systems and data logging features"
+        "Developed a comprehensive Human Resource Management System using React.js for the frontend and a scalable backend API.",
+        "Implemented modules for Employee Management, Leave Management, Attendance Tracking, and Payroll Processing.",
+        "Designed responsive and interactive UI components using React hooks and functional components.",
+        "Integrated secure authentication and role-based access control for Administrators, HR, and Employees."
       ]
     });
 
@@ -111,7 +104,7 @@ export async function seedDatabase() {
     // 6. Additional Info
     await storage.createAdditionalInfo({
       items: [
-        "Strong problem-solving abilities with experience in debugging complex multi-tier applications",
+        "Strong problem-solving abilities with experience in debugging complex applications",
         "Excellent team collaboration and communication skills in Agile/Scrum environments",
         "Passionate about learning new technologies and staying current with industry best practices",
         "Available for immediate joining and open to relocation"
