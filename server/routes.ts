@@ -95,6 +95,18 @@ export async function seedDatabase() {
     });
 
     await storage.createProject({
+      title: "AGV Fleet Management & Monitoring System",
+      technologies: "MS SQL Server, Syncfusion, Real-Time Tracking, Dashboard Visualization",
+      description: [
+        "Developed an AGV (Automated Guided Vehicle) Management Application to monitor, control, and manage multiple AGVs in a manufacturing environment.",
+        "The system provides real-time tracking of AGV locations, task assignments, battery status, and operational alerts.",
+        "Integrated Syncfusion controls for dashboard visualization, task grids, and performance reports.",
+        "Used MS SQL Server for storing task history, movement logs, and error records.",
+        "Designed operator-friendly interfaces for dispatching tasks and monitoring fleet performance."
+      ]
+    });
+
+    await storage.createProject({
       title: "HRMS PROJECT",
       technologies: "React.js, Node.js API, SQL, Bootstrap",
       description: [
