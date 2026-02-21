@@ -96,14 +96,24 @@ export async function seedDatabase() {
 
     // 4. Projects
     await storage.createProject({
+      title: "Human Resource Management System (HRMS)",
+      technologies: "React.js, .NET Web API, SQL Server, Bootstrap",
+      description: [
+        "Developed and customized a comprehensive HRMS for multiple clients in the manufacturing and service sectors, tailoring modules to specific business workflows.",
+        "Implemented core modules including Employee Management, Leave Management, Attendance Tracking with biometric integration, and Payroll Processing.",
+        "Designed responsive and interactive user interfaces using React functional components and hooks, ensuring a consistent UX across different client versions.",
+        "Integrated secure authentication and role-based access control for Administrators, HR, and Employees, with custom permission sets per client requirements."
+      ]
+    });
+
+    await storage.createProject({
       title: "Real-Time SCADA Visualization System",
       technologies: "VisiWin, MS SQL Server, Syncfusion, PLC Integration",
       description: [
-        "Developed a real-time SCADA visualization application using VisiWin for industrial process monitoring and control.",
-        "Designed interactive HMI screens to display live machine data, alarms, and production parameters.",
-        "Integrated Syncfusion components for advanced data visualization such as charts, grids, and dashboards.",
-        "Used MS SQL Server for storing historical data, alarm logs, and production reports.",
-        "Implemented role-based access and ensured smooth real-time communication between PLC systems and the application."
+        "Developed and deployed real-time SCADA visualization applications for various industrial clients, focusing on process monitoring and control customization.",
+        "Designed client-specific HMI screens to display live machine data, alarms, and production parameters tailored to unique factory layouts.",
+        "Integrated Syncfusion components for advanced data visualization such as charts, grids, and dashboards for reporting across different manufacturing plants.",
+        "Implemented role-based access and ensured smooth real-time communication between diverse PLC systems and the central application."
       ]
     });
 
@@ -111,22 +121,10 @@ export async function seedDatabase() {
       title: "AGV Fleet Management & Monitoring System",
       technologies: "MS SQL Server, Syncfusion, Real-Time Tracking, Dashboard Visualization",
       description: [
-        "Developed an AGV (Automated Guided Vehicle) Management Application to monitor, control, and manage multiple AGVs in a manufacturing environment.",
-        "The system provides real-time tracking of AGV locations, task assignments, battery status, and operational alerts.",
-        "Integrated Syncfusion controls for dashboard visualization, task grids, and performance reports.",
-        "Used MS SQL Server for storing task history, movement logs, and error records.",
-        "Designed operator-friendly interfaces for dispatching tasks and monitoring fleet performance."
-      ]
-    });
-
-    await storage.createProject({
-      title: "Human Resource Management System (HRMS)",
-      technologies: "React.js, .NET Web API, SQL Server, Bootstrap",
-      description: [
-        "Developed a comprehensive Human Resource Management System (HRMS) using React.js for the frontend and .NET Web API for backend services.",
-        "Managed core HR operations including Employee Management, Leave Management, Attendance Tracking, and Payroll Processing.",
-        "Designed responsive and interactive user interfaces using React functional components and hooks.",
-        "Implemented secure authentication and role-based access control for Administrators, HR, and Employees."
+        "Developed and modified AGV Management Applications for multiple automotive and logistics clients to monitor and control diverse vehicle fleets.",
+        "Customized real-time tracking of AGV locations, task assignments, and battery status based on specific warehouse navigation systems.",
+        "Integrated Syncfusion controls for dashboard visualization, task grids, and performance reports adapted to different operational KPIs.",
+        "Designed operator-friendly interfaces for dispatching tasks and monitoring fleet performance, refined through feedback from various client stakeholders."
       ]
     });
 
