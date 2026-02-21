@@ -50,7 +50,7 @@ export async function seedDatabase() {
       email: "hanamant5496@gmail.com",
       phone: "7022478751",
       location: "Khanapur, Belagavi, Karnataka",
-      summary: "Results-driven Software Developer with 2+ years of experience specializing in modern web development. Proven expertise in developing scalable web applications and implementing solid frontend architectures. Strong background in full-stack development with proficiency in React.js, JavaScript, SQL, and modern UI frameworks. Demonstrated ability to deliver high-quality software solutions that improve system performance and enhance user experience."
+      summary: "Results-driven Software Developer with 4+ years of experience specializing in both modern web development and enterprise desktop applications. Proven expertise in building scalable web apps with React.js and architecting robust WPF desktop solutions using MVVM. Strong background in full-stack development with proficiency in C#, .NET, JavaScript, and SQL. Demonstrated ability to deliver high-quality software that improves system performance and user experience."
     });
 
     // 2. Skills
@@ -59,15 +59,28 @@ export async function seedDatabase() {
       items: ["React.js", "JavaScript", "HTML5", "CSS3", "Responsive Web Design", "Tailwind CSS", "Bootstrap"]
     });
     await storage.createSkill({
-      category: "Backend & Databases",
-      items: ["Node.js", "Express", "RESTful API Development", "SQL", "Database Design & Optimization"]
+      category: "Desktop & Backend",
+      items: ["WPF (Windows Presentation Foundation)", "XAML", "MVVM Pattern", "C#", ".NET Core", "Entity Framework"]
     });
     await storage.createSkill({
-      category: "Tools & Methodologies",
-      items: ["Git", "GitHub", "Version Control", "Agile/Scrum Methodology", "VS Code", "Debugging & Troubleshooting"]
+      category: "Databases & Tools",
+      items: ["SQL Server", "PostgreSQL", "RESTful API Development", "Git", "Agile/Scrum"]
     });
 
     // 3. Experience
+    await storage.createExperience({
+      role: "Senior Software Engineer (WPF Specialist)",
+      company: "Tech Solutions Inc.",
+      period: "January 2020 - October 2023",
+      description: [
+        "Led the development of enterprise-level desktop applications using WPF and C#, serving 10,000+ corporate users.",
+        "Architected and implemented robust MVVM patterns to ensure maintainable and testable codebases.",
+        "Developed custom XAML controls and complex animations to enhance user experience and application aesthetics.",
+        "Optimized application performance by implementing asynchronous programming and efficient data binding strategies.",
+        "Integrated third-party UI libraries like DevExpress and Telerik for advanced data visualization and reporting."
+      ]
+    });
+
     await storage.createExperience({
       role: "Software Engineer",
       company: "b+m surface system",
