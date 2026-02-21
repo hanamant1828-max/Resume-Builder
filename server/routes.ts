@@ -106,6 +106,17 @@ export async function seedDatabase() {
       ]
     });
 
+    await storage.createProject({
+      title: "Human Resource Management System (HRMS)",
+      technologies: "React.js, .NET Web API, SQL Server, Bootstrap",
+      description: [
+        "Developed a comprehensive Human Resource Management System (HRMS) using React.js for the frontend and .NET Web API for backend services.",
+        "Managed core HR operations including Employee Management, Leave Management, Attendance Tracking, and Payroll Processing.",
+        "Designed responsive and interactive user interfaces using React functional components and hooks.",
+        "Implemented secure authentication and role-based access control for Administrators, HR, and Employees."
+      ]
+    });
+
     // 5. Education
     await storage.createEducation({
       degree: "Bachelor of Engineering in Computer Science",
